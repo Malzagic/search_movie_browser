@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,154 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #333;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 50px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(45, 45, 45);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.search-container form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+input.search-bar {
+  all: unset;
+  font: 15px system-ui;
+  color: #fff;
+  background-color: #333;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+input.search-bar:active,
+input.search-bar:hover {
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit {
+  margin-left: 1rem;
+  color: #fff;
+  background-color: rgb(45, 45, 45);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease-in-out;
+}
+
+.btn-submit:hover,
+.btn-submit:active {
+  background-color: #333;
+  box-shadow: none;
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.movie-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.thumbnail {
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 0.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 320px;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  background: rgb(45, 45, 45);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.card h3 {
+  margin: 0.2rem 0;
+}
+
+.card p {
+  padding: 0.2rem;
+}
+
+
+.reviews {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #ddd;
+  transition: .3s ease-in-out;
+}
+
+.reviews:hover,
+.reviews:active {
+  filter: brightness(180%);
+  filter: drop-shadow(0 0 1px #fff);
+}
+
+
+@media(max-width: 375px) {
+  .main-nav {
+    flex-direction: column;
+  }
+  .header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .heading {
+    margin: 0.5rem 0;
+  }
+  .btn-submit {
+    padding: 10px 15px;
+  }
+  .movie-section {
+    grid-template-columns: auto;
+  }
 }
